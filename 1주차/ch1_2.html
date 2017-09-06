@@ -1,0 +1,98 @@
+<!-- emmet 메타문자 -->
+<!-- > : 해당 태그를 열고 들여쓰기 -->
+<!-- + : 줄바꿈을 하고 다음 태그 추가 -->
+<!-- . : Class 지정 -->
+<!-- # : ID 지정 -->
+<!-- [] : 커스텀 속성 지정 -->
+<!-- ^ : 한 수준 올라가기 -->
+<!-- () : 그룹 지정 -->
+<!-- * : 정해진 수만큼 태그 반복 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>emmet 메타문자 모음</title>
+  </head>
+  <body id="menu_1">
+    <!-- 반복태그 -->
+    <!-- ul>li.item$*5 -->
+
+    <ul>
+      <li class="item1"></li>
+      <li class="item2"></li>
+      <li class="item3"></li>
+      <li class="item4"></li>
+      <li class="item5"></li>
+    </ul>
+
+    <!-- 콘텐츠 및 커스텀 -->
+    <!-- h3{머리말-인터넷활용}+p.highlight*3+h2{HTML5입문}+p -->
+
+    <h3>머리말-인터넷활용</h3>
+    <p class="highlight"></p>
+    <p class="highlight"></p>
+    <p class="highlight"></p>
+    <h2>HTML5입문</h2>
+    <p></p>
+
+    <!-- 그룹 지정 -->
+    <!-- (p>img)*p -->
+
+    <p>
+      <p><img src="" alt=""></p>
+    </p>
+
+    <!-- p>img^p -->
+
+    <p><img src="" alt=""></p>
+    <p></p>
+
+    <!-- 텍스트 채우기 -->
+    <!-- Lorem10*3 -->
+
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, asperiores.</div>
+    <div>Provident doloribus id natus minima, iusto aspernatur veritatis dignissimos architecto.</div>
+    <div>Quae animi molestias tempore consequuntur dolor earum, quia, quis odit!</div>
+
+    <!-- ul.cwk-list>lorem5.item*3 -->
+
+    <ul class="cwk-list">
+      <li class="item">Lorem ipsum dolor sit amet.</li>
+      <li class="item">Dolorem odio quae numquam omnis.</li>
+      <li class="item">Autem tenetur, eius! Cum, eligendi?</li>
+    </ul>
+
+    <!-- $와 @ -->
+    <!-- a[href='#$$']*3>img[src="alt='filename$$@3'"]*3 -->
+
+    <a href="#01">
+      <img src="alt='filename03'" alt="">
+      <img src="alt='filename04'" alt="">
+      <img src="alt='filename05'" alt="">
+    </a>
+    <a href="#02">
+      <img src="alt='filename03'" alt="">
+      <img src="alt='filename04'" alt="">
+      <img src="alt='filename05'" alt="">
+    </a>
+    <a href="#03">
+      <img src="alt='filename03'" alt="">
+      <img src="alt='filename04'" alt="">
+      <img src="alt='filename05'" alt="">
+    </a>
+
+    <!-- html>head>title>{HTML5 Basic}^^body>h1>{Hello World..!} -->
+
+    <!-- <html>
+    <head>
+      <title>HTML5 Basic</title>
+    </head>
+    <body>
+      <h1>Hello World..!</h1>
+    </body>
+    </html> -->
+
+    <a href="../menu.html#menu">메뉴로 돌아가기</a> 
+
+  </body>
+</html>
