@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5_기본_태그_2</title>
+</head>
+<body>
+  <!-- 목차 -->
+  <h1 id="menu">목차</h1>
+  <a href="#menu_1"><h2>1. ul 태그</h2></a>
+  <a href="#menu_2"><h2>2. ol 태그</h2></a>
+  <a href="#menu_3"><h2>3. dl 태그</h2></a>
+  <a href="#menu_4"><h2>4. 실습 1</h2></a>
+  <a href="#menu_5"><h2>5. 실습 2</h2></a>
+  <a href="#menu_6"><h2>6. 테이블 태그</h2></a>
+  <a href="#menu_7"><h2>7. 실습 3</h2></a>
+  <a href="#menu_8"><h2>8. 이미지 태그</h2></a>
+  <a href="#menu_9"><h2>9. 실습 4</h2></a>
+  <a href="../menu.html#menu">메뉴로 돌아가기</a> 
+  <hr>
+  <br>
+
+  <!-- ul 태그 -->
+  <a href="#menu"><h1 id="menu_1">1. ul 태그</h1></a>
+  <ul>
+    <li>사과</li>
+    <li>바나나</li>
+    <li>오렌지</li>
+  </ul>
+  <hr>
+  <br>
+
+
+  <!-- ol 태그 -->
+  <a href="#menu"><h1 id="menu_2">2. ol 태그</h1></a>
+  <ol>
+    <li>사과</li>
+    <li>바나나</li>
+    <li>오렌지</li>
+  </ol>
+  <hr>
+  <br>
+
+  <!-- dl 태그 -->
+  <a href="#menu"><h1 id="menu_3">3. dl 태그</h1></a>
+  <dl>
+    <dt>홍차</dt>
+    <dd>
+      홍차는 백차, 녹차, 우롱차보다 더 많이 발효된 차의 일종이다.
+    </dd>
+  </dl>
+  <hr>
+  <br>
+
+  <!-- 4. 실습_1 -->
+  <a href="#menu"><h1 id="menu_4">4. 실습 1</h1></a>
+  <ul>
+    <li>따뜻한음료</li>
+    <ol>
+      <li>커피</li>
+      <li>녹차</li>
+      <li>둥글레차</li>
+    </ol>
+    <li>차가운음료</li>
+    <ol>
+      <li>커피</li>
+      <li>스무디</li>
+      <li>식혜</li>
+    </ol>
+  </ul>
+
+  <!-- 5. 실습_2 -->
+  <a href="#menu"><h1 id="menu_5">5. 실습 2</h1></a>
+  <h1>라면레시피</h1>
+  <dl>
+    <dt>준비물</dt>
+    <ul>
+      <li>물 550CC</li>
+      <li>라면 봉지</li>
+    </ul>
+    <dt>조리법</dt>
+    <ol>
+      <li>물을 끓인다.</li>
+      <li>물이 끓으면, 면과 스프를 넣는다.</li>
+      <li>5분뒤 맛있게 먹는다.</li>
+    </ol>
+  </dl>
+  <hr>
+  <br>
+
+  <!-- 6. 테이블 -->
+  <a href="#menu"><h1 id="menu_6">6. 테이블 태그</h1></a>
+  <table border="1">
+    <tr>
+      <th>이름</th>
+      <th>나이</th>
+      <th>점수</th>
+    </tr>
+    <tr>
+      <td>철수</td>
+      <td>20세</td>
+      <td>70점</td>
+    </tr>
+    <tr>
+      <td>영희</td>
+      <td>21세</td>
+      <td>90점</td>
+    </tr>
+  </table>
+  <hr>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>thead 태그 내부</td>
+        <td>thead 태그 내부</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>thead 태그 내부</td>
+        <td>thead 태그 내부</td>
+      </tr>
+      <tr>
+        <td>thead 태그 내부</td>
+        <td>thead 태그 내부</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>thead 태그 내부</td>
+        <td>thead 태그 내부</td>
+      </tr>
+    </tfoot>
+  </table>
+  <hr>
+  <!-- table>thead>tr>th*6>^^^tbody>tr>td*6^tr>td*6> -->
+  <table border="1">
+    <thead>
+      <tr>
+        <th></th>
+        <th>윌</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1교시</td>
+        <td>영어</td>
+        <td>국어</td>
+        <td>과학</td>
+        <td>미술</td>
+        <td>기술</td>
+      </tr>
+      <tr>
+        <td>2교시</td>
+        <td>도덕</td>
+        <td>체육</td>
+        <td>영어</td>
+        <td>수학</td>
+        <td>사회</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <!-- table[border="1"]>tr>td*2>^^tr>td[colspan="2"]> -->
+  <table border="1">
+    <tr>
+      <td>aaaaaa</td>
+      <td>bbbbbb</td>
+    </tr>
+    <tr>
+      <td colspan="2">c</td>
+    </tr>
+  </table>
+  <hr>
+  <!-- table[border="1"]>tr>td[rowspan="3"]{aaaaa}>^td{bbbbb}>^^tr>td{ccccc}>^^tr>td{ddddd}> -->
+  <table border="1">
+    <tr>
+      <td rowspan="3">aaaaa</td>
+      <td>bbbbb</td>
+    </tr>
+    <tr>
+      <td>ccccc</td>
+    </tr>
+    <tr>
+      <td>ddddd</td>
+    </tr>
+  </table>
+  <hr>
+  <table border="1">
+    <tr>
+      <th colspan="2">지역별 홍차</th>
+    </tr>
+    <tr>
+      <th rowspan="3">중국</th>
+      <td>정산소종</td>
+    </tr>
+    <tr>
+      <td>가문</td>
+    </tr>
+    <tr>
+      <td>운남</td>
+    </tr>
+    <tr>
+      <th rowspan="4">인도 및 스리랑카</th>
+      <td>아삼</td>
+    </tr>
+    <tr>
+      <td>실론</td>
+    </tr>
+    <tr>
+      <td>다질링</td>
+    </tr>
+    <tr>
+      <td>닐기리</td>
+    </tr>
+  </table>
+  <hr>
+  <br>
+
+  <!-- 7. 실습 3 -->
+  <a href="#menu"><h1 id="menu_7">7. 실습 3</h1></a>
+  <table border="1">
+    <tr>
+      <th colspan="6" align="center">한국의 차</th>
+    </tr>
+    <tr>
+      <th rowspan="4">뿌리차</th>
+      <td>인삼차</td>
+      <th rowspan="6">과일차</th>
+      <td>수정과</td>
+      <th rowspan="3">잎차</th>
+      <td>뽕잎차</td>
+    </tr>
+    <tr>
+      <td>당귀차</td>
+      <td>유자차</td>
+      <td>감입차</td>
+    </tr>
+    <tr>
+      <td>생강차</td>
+      <td>구기자차</td>
+      <td>솔잎차</td>
+    </tr>
+    <tr>
+      <td>칡차</td>
+      <td>대추차</td>
+      <th rowspan="3">기타</th>
+      <td>두충차</td>
+    </tr>
+    <tr>
+      <th rowspan="2">곡물차</th>
+      <td>보리차</td>
+      <td>모과차</td>
+      <td>영지버섯차</td>
+    </tr>
+    <tr>
+      <td>옥수수차</td>
+      <td>산수유차</td>
+      <td>귤강차</td>
+    </tr>
+  </table>
+  <hr>
+  <br>
+
+  <!-- 8. 이미지 태그 -->
+  <a href="#menu"><h1 id="menu_8">8. 이미지 태그</h1></a>
+  <img src="test_img.jpg" width="500"> default <br>
+  <img src="test_img.jpg" width="500" align="top">align = "top"<br></img>
+  <img src="test_img.jpg" width="500" align="middle">align = "middle"<br></img>
+  <img src="test_img.jpg" width="500" align="bottom">align = "bottom"<br></img>
+  <hr>
+  <br>
+
+  <!-- 9. 실습 4 -->
+  <a href="#menu"><h1 id="menu_9">9. 실습 4</h1></a>
+  <img src="test_img2.jpg" alt="기타" width="300" align="middle"> 기타 <br>
+
+
+
+
+
+</body>
+</html>
