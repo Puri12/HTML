@@ -16,50 +16,50 @@ ul {
 	}
 ul li {
 	 /*1. display속성 inline으로 설정*/
-
+	 display: inline;
 	}
 a {
 	 /*2. text-decoration속성을 적용해 a태그의 밑줄제거 */
-
+	 text-decoration: none;
 	}
 ul li a {
 		color: #000;
 		 /*3. background 색상 #dddddd(#ddd)로 설정 */
-
+		 background-color: #ddd;
 	}
 ul li a:hover {
 		color: #fff;
 		/*4. background 색상 #555555(#555)로설정*/
-
+		background-color: #555;
 	}
 /******* header **********/
 header {
 	/* 5. background 색상 #ffffff(#fff) 로 설정*/
-
+	background-color: #fff;
 	/*6. border-radius15px로 설정*/
-
+	border-radius: 15px;
 	box-shadow: 0px 0px 10px 0px #888888;
 }
 /******* main-content **********/
 section{
 	 /*7. display 속성 inline-block으로 설정 */
-
-		margin:20px 0 20px 0;
-		padding:20px;
-		/*float:left;*/
-		border-top: 2px solid #ce0101;
-		/* 8. border-radius15px로 설정*/
-
-		box-shadow: 0px 0px 10px 0px #888888;
-		 /*9. background 색상 원하는 색상으로 설정 */
-
+	 display: inline-block;
+	 margin:20px 0 20px 0;
+	 padding:20px;
+	 /*float:left;*/
+	 border-top: 2px solid #455A64;
+	 /* 8. border-radius15px로 설정*/
+	 border-radius: 15px;
+	 box-shadow: 0px 0px 10px 0px #888888;
+	 /*9. background 색상 원하는 색상으로 설정 */
+	 background-color: #CFD8DC;
 	}
 section a {
-		color: blue;
+		color: #01579B;
 	}
 section a:hover {
 	 /*10. text-decoration속성을 적용해 a태그의 밑줄제거 */
-
+	 text-decoration: none;
 	}
 
 .box {
@@ -67,17 +67,18 @@ section a:hover {
 		width:100px;
 	  margin:20px;
 	  padding:20px;
-	  border:5px solid blue;
+	  border:5px solid #455A64;
+		border-radius: 15px;
 		 /*11. background 이미지 삽입 */
-
+		 background-image: url('cat.jpg');
 	}
 
 /******* footer **********/
 footer {
 	/*12. background 색상 #ffffff(#fff) 로 설정*/
-
+	background-color: #fff;
 	padding:10px;
 	/* 13.  border-radius15px로 설정*/
-
+	border-radius: 15px;
 	box-shadow: 0px 0px 10px 0px #888888;
 }

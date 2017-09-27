@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3 Property Basic</title>
+  <style media="screen">
+    /*#parent, #other, #grandparent {
+      border: 5px solid tomato;
+    }
+    #grandparent {
+      position: relative;
+    }
+    #me {
+      background-color: black;
+      color: white;
+      position: absolute;
+      left: 0px;
+      right: 600px;
+      top: 0px;
+      bottom: 100px;
+    }*/
+    #parent, #other {
+      border: 5px solid tomato;
+    }
+    #large {
+      height: 3000px;
+      background-color: yellow;
+    }
+    #me {
+      background-color: black;
+      color: white;
+      position: fixed;
+      left: 200px;
+      top: 300px;
+      bottom: 500px;
+      right: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="other">other</div>
+  <div id="parent">
+    parent
+    <div id="me">me</div>
+  </div>
+  <div id="large">large</div>
+</body>
+</html>
