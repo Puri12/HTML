@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript</title>
+    <script>
+    function if_else() {
+      var date = new Date();
+      var hours = date.getHours();
+
+      if (hours < 5) {
+        alert('잠을 자렴...');
+      } else if (hours < 7) {
+        alert('준비');
+      } else if (hours < 9) {
+        alert('출근');
+      } else if (hours < 12) {
+        alert('빈둥빈둥');
+      } else if (hours < 1) {
+        alert('식사');
+      }
+    }
+
+    function while_() {
+      while (true) {
+        document.write('Hello world <br>');
+      }
+    }
+
+    function break_() {
+      for(var i = 0; i < 10; i++) {
+        if(i === 5) {
+          break;
+        }
+        document.write('Hello world'+i+'<br>');
+      }
+    }
+
+    function continue_() {
+      for(var i = 0; i < 10; i++) {
+        if(i === 5) {
+          continue;
+        }
+        document.write('Hello world'+i+'<br>');
+      }
+    }
+
+    function arr_() {
+      var arr = [1,2,3,4,5];
+      document.write('배열의 길이 : '+arr.length+'<br><hr>');
+
+      var list1 = ['a', 'b', 'c', 'd'];
+      document.write(list1+'<br>');
+      document.write(list1.push('e')+list1+'<br>');
+      document.write(list1.unshift('z')+list1+'<br>');
+      document.write(list1.splice(2, 0, 'B')+list1+'<br><hr>');
+
+      var list2 = [1,2,3,4,5];
+      document.write(list2+'<br>');
+      document.write(list2.shift()+list2+'<br>');
+      document.write(list2.pop()+list2+'<br><hr>');
+
+      var list3 = ['c', 'e', 'a', 'b', 'd'];
+      document.write(list3+'<br>');
+      document.write(list3.sort()+list3+'<br>');
+      document.write(list3.reverse()+list3+'<br><hr>');
+    }
+
+    function call() {
+      function callTenTimes(callback) {
+        for (var i = 0; i < 10; i++) {
+          callback();
+        }
+      }
+
+      var callback = function () {
+        alert('함수 호출');
+      };
+
+      callTenTimes(callback);
+    }
+
+    function array_() {
+      var person = {
+        name: '윤인성',
+        eat: function (food) {
+          alert(this.name + '이 ' + food + '을/를 먹습니다.');
+        }
+      };
+
+      person.eat('밥');
+    }
+
+    </script>
+</head>
+<body>
+  <input type="button" value="if / else if 코드" onclick="if_else();"><br><hr>
+  <input type="button" value="while 코드" onclick="while_();"><br><hr>
+  <input type="button" value="break 코드" onclick="break_();">
+  <input type="button" value="continue 코드" onclick="continue_();"><br><hr>
+  <input type="button" value="배열" onclick="arr_();"><br><hr>
+  <input type="button" value="콜백 함수" onclick="call();"><br><hr>
+  <input type="button" value="배열" onclick="array_();">
+  <br>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    window.onload = function() {
+      var button = document.getElementById('button');
+
+      button.onclick = function() {
+        alert('click');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>인라인</h1>
+  <button type="button" name="button" onclick="alert('click')">버튼</button><br><hr>
+
+  <h1>고전</h1>
+  <button type="button" name="button" id="button">버튼</button><br><hr>
+
+  <h1>addEventListener</h1>
+  <input type="button" id="targetBtn" value="Button">
+  <script type="text/javascript">
+  var targetBtn = document.getElementById('targetBtn');
+  targetBtn.addEventListener('click', function(event){alert('Hi');});
+  targetBtn.addEventListener('click', function(event){alert('Bye');});
+  </script><hr>
+  <input type="button" id="targetBtn1" value="Button1">
+  <input type="button" id="targetBtn2" value="Button2">
+  <script type="text/javascript">
+    var targetBtn1 = document.getElementById('targetBtn1');
+    var targetBtn2 = document.getElementById('targetBtn2');
+
+    function btn_listener(event) {
+      switch (event.target.id) {
+        case 'targetBtn1': alert("Button 1 is clicked");break;
+        case 'targetBtn2': alert("Button 2 is clicked");break;
+      }
+    }
+    targetBtn1.addEventListener('click', btn_listener);
+    targetBtn2.addEventListener('click', btn_listener);
+  </script><br><hr>
+
+  <h1>인라인 이벤트 삭제</h1>
+  <p>
+    <label>PREVENT EVENT ON</label>
+    <input type="checkbox" id="prevent" name="prevent">
+  </p>
+  <p>
+    <a href="http://naver.com" onclick="if(document.getElementById('prevent').checked) return false;">naver</a>
+  </p>
+  <p>
+    <form action="http://daum.net" onclick="if(document.getElementById('prevent').checked) return false;">
+      <input type="submit">
+    </form>
+  </p><br><hr>
+
+  <h1>Property 이벤트 삭제</h1>
+  <p>
+    <label>PREVENT EVENT ON</label>
+    <input type="checkbox" id="prevent" name="prevent">
+  </p>
+  <p>
+    <a href="http://naver.com">naver</a>
+  </p>
+  <p>
+    <form action="http://daum.net">
+      <input type="submit">
+    </form>
+  </p>
+  <script type="text/javascript">
+    document.querySelector('a').onclick = function(event) {
+      if(document.getElementById('prevent').checked) return false;
+    };
+    document.querySelector('form').onclick = function(event) {
+      if(document.getElementById('prevent').checked) return false;
+    };
+  </script><br><hr>
+
+  <h1>addEventListener 이밴트 삭제</h1>
+  <p>
+    <label>PREVENT EVENT ON</label>
+    <input type="checkbox" id="prevent" name="prevent">
+  </p>
+  <p>
+    <a href="http://naver.com">naver</a>
+  </p>
+  <p>
+    <form action="http://daum.net">
+      <input type="submit">
+    </form>
+  </p>
+  <script type="text/javascript">
+    document.querySelector('a').onclick = function(event) {
+      if(document.getElementById('prevent').checked) event.preventDefault();
+    };
+    document.querySelector('form').onclick = function(event) {
+      if(document.getElementById('prevent').checked) event.preventDefault();
+    };
+  </script><br><hr>
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript2</title>
+  <script>
+    function window_() {
+      var str1 = "Hello JavaScript";
+      alert(str1);
+      alert(window.str1);
+    }
+
+    function func_prompt() {
+      if(prompt('id는?')==='JavaScript') {
+        alert('hello');
+      } else {
+        alert('bye');
+      }
+    }
+
+    function herf_() {
+      location.href="http://naver.com";
+    }
+
+    function reload() {
+      location.reload();
+    }
+
+    function func_open1() {
+      window.open('ch09_JavaScript2.html');
+    }
+    function func_open2() {
+      window.open('ch09_JavaScript2.html','_self');
+    }
+    function func_open3() {
+      window.open('ch09_JavaScript2.html','_blank');
+    }
+    function func_open4() {
+      window.open('ch09_JavaScript2.html','ot');
+    }
+    function func_open5() {
+      window.open('ch09_JavaScript2.html','_blank','width=200,height=200,resizeable=no');
+    }
+
+    function get_element() {
+      var header = document.getElementById('header');
+
+      header.style.color = 'orange';
+      header.style.background = 'red';
+      header.innerHTML = 'From JavaScript';
+    }
+
+    function query_select() {
+      var header = document.querySelector('h1');
+
+      header.style.color = 'orange';
+      header.style.background = 'red';
+      header.innerHTML = 'From JavaScript';
+    }
+
+    function query_select_all() {
+      var headers = document.querySelectorAll('h1');
+
+      for(var i = 0; i < headers.length; i++) {
+        var header = headers[i];
+
+        header.style.color = 'orange';
+        header.style.background = 'red';
+        header.innerHTML = 'From JavaScript';
+      }
+    }
+
+    function inner_HTML() {
+      var output = '';
+      for(var i = 0; i < 10; i++) {
+        output += '<h1>'
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="윈도우 객체" onclick="window_();"><br><hr>
+
+  <input type="button" value="Prompt" onclick="func_prompt();"><br><hr>
+
+  <input type="button" value="문서 이동" onclick="herf_();"><br><br>
+  <input type="button" value="문서 리로드" onclick="reload();"><br><hr>
+
+  <ul>
+    <li><input type="button" value="새창열기1" onclick="func_open1();"></li>
+    <li><input type="button" value="새창열기2" onclick="func_open2();"></li>
+    <li><input type="button" value="새창열기3" onclick="func_open3();"></li>
+    <li><input type="button" value="새창열기4" onclick="func_open4();"></li>
+    <li><input type="button" value="새창열기5" onclick="func_open5();"></li>
+  </ul><hr>
+
+  <input type="button" value="문서 객체 선택_id" onclick="get_element();">
+  <input type="button" value="문서 객체 선택_선택자" onclick="query_select();">
+  <input type="button" value="문서 객체 선택_선택자_전체" onclick="query_select_all();"><br>
+  <h1 id="header">ID_Header</h1>
+  <h1>h1_Header</h1>
+  <h1>h1_Header</h1><hr>
+</body>
+</html>

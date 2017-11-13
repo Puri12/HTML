@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    .hover_class {
+      background-color: red; color: white;
+    }
+  </style>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script>
+    var clicked = 0;
+    $(document).ready(function(){
+      $("#click_event").click(function(){alert("클릭 이벤트!!!");})
+      $("#dblclick_event").dblclick(function(){alert("더블 클릭 이벤트!!!");})
+      $("#select_event").change(function(){
+        var selectValue = $("#select_event").val();
+        alert("값이 변경되었습니다. (선택된 값은"+selectValue+")입니다.");
+      })
+      $("#keypress_event").keypress(function(){console.log("Keypress 이벤트 발생중...");})
+      $("#keyup_event").keyup(function(){alert("Keyup 이벤트!!!");})
+      $("#mousehover_event").hover(
+        function(){$("#mousehover_event").attr("class", "hover_class");},
+        function(){$("#mousehover_event").attr("class", " ");}
+      )
+      // $("#focusButton_event").click(function(){ clicked = 1;})
+      // $("#focusText_event").focus(function(){
+      //     alert("포커스를 얻었습니다.");
+      // })
+      // $("#focusText_event").blur(function(){
+      //     alert("포커스를 벗어났습니다.");
+      // })
+      $("#focusButton_event").click(function(){ clicked = 1;})
+      $("#focusText_event").focus(function(){
+        if(clicked == 1){
+          alert("포커스를 얻었습니다.");
+        }
+      })
+      $("#focusText_event").blur(function(){
+        if(clicked == 1) {
+          clicked = 0;
+          alert("포커스를 벗어났습니다.");
+        }
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="button" id="click_event" value="click button"><br><br>
+  <input type="button" id="dblclick_event" value="dbclick button"><br><br>
+  <select id="select_event">
+    <option value="1">첫번째</option>
+    <option value="2">두번째</option>
+  </select><br><br>
+  <input type="text" id="keypress_event"><br><br>
+  <input type="text" id="keyup_event"><br><br>
+  <div id="mousehover_event">마우스를 올리면 영역의 색이 변합니다.</div><br><br>
+  <input type="text" id="focusText_event"><br>
+  <input type="button" id="focusButton_event" value="text포커스 이동"><br><br>
+</body>
+</html>

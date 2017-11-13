@@ -1,0 +1,48 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+/*header*/
+header {
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: red;
+  width: 778px;
+}
+/*section과 sidebar1 묶음*/
+div {
+  float: left;
+}
+/*section*/
+section {
+  float: right;
+  padding: 10px;
+  background-color: yellow;
+  border: 1px solid #000;
+  width: 378px;
+  margin-bottom: 10px;
+}
+/*Sidebar*/
+#sidebar1 {
+  float: left;
+  padding: 10px;
+  border: 1px solid #000;
+  width: 178px;
+  background-color: green;
+}
+#sidebar2 {
+  float: left;
+  padding: 10px;
+  border: 1px solid #000;
+  width: 178px;
+  background-color: skyblue;
+}
+/*Footer*/
+footer {
+  clear: both;
+  padding: 10px;
+  border: 1px solid #000;
+  background-color: blue;
+  width: 778px;
+}

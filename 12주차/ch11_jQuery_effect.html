@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Effect</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+    #show_effect{
+        border-radius:5px;
+        border: 1px solid gray;
+        padding : 10px;
+      }
+    #show_effect img, #fade_effect img{
+        display : none;
+        max-width : 500px;
+    }
+    #slide_effect{
+        border-radius:5px;
+        border: 1px solid gray;
+        display : none;
+        padding : 10px;
+        text-align : center;
+    }
+    #fade_effect{
+        border-radius:5px;
+        border: 1px solid gray;
+        padding : 10px;
+    }
+    </style>
+    <script>
+    $(document).ready(function(){
+      // show effect
+      $("#show_btn").click(function(){$("#show_effect img").show()});
+      $("#refresh_btn").click(function(){$("#show_effect img").hide()});
+      // 1. show 시간설정 하고 실행 확인(2초=2000)
+      $("#showTime_btn").click(function(){$("#show_effect img").hide().show()});
+      $("#toggle_btn").click(function(){$("#show_effect h2").toggle()});
+      // 2. toggle 시간설정하고 실행 확인(2초=2000)
+      $("#toggleTime_btn").click(function(){$("#show_effect h2").stop().toggle()});
+
+      // slide effect
+      $("#slidedown_btn").click(function(){$("#slide_effect").slideDown()});
+      // 3. slideDown 시간설정하고 실행 확인(2초=2000)
+       $("#slidedownTime").click(function(){$("#slide_effect").hide(). slideDown()});
+       $("#slideUp_btn").click( function(){$("#slide_effect").slideUp()});
+       // 4. slideUp 시간설정하고 실행 확인(2초=2000)
+       $("#slideUpTime").click(function(){$("#slide_effect").show(). slideUp()});
+       $("#slideToggle").click( function(){$("#slide_effect").slideToggle()});
+       // 5. slideToggle 시간 설정하고 실행확인(2초=2000)
+       $("#slideToggleTime").click(function(){$("#slide_effect").stop(). slideToggle()});
+       $("#slide_hide").click(function(){$("#slide_effect").hide()});
+
+      // fade effect
+      $("#fadeIn_btn").click(function(){$("#fade_effect img").fadeIn()});
+      // 6. fadeIn시간설정하고 실행 확인(2초=2000)
+       $("#fadeInTime").click(function(){$("#fade_effect img").hide(). fadeIn()});
+       $("#fadeOut_btn").click(function(){$("#fade_effect img").fadeOut()});
+       // 7. fadeOut시간설정하고 실행 확인(2초=2000)
+        $("#fadeOutTime").click(function(){$("#fade_effect img").show(). fadeOut()});
+        $("#fadeToggle").click( function(){$("#fade_effect img").fadeToggle()});
+        // 8. fadeToggle 시간 설정하고 실행확인(2초=2000)
+        $("#fadeToggleTime").click(function(){$("#fade_effect img").stop(). fadeToggle()});
+    })
+    </script>
+</head>
+<body>
+  <h1> 1. show(), hide(), toggle() </h1>
+  <button type="button" id = "show_btn" >Show버튼</button>
+  <button type="button" id = "refresh_btn">Hide버튼</button>
+  <button type="button" id = "showTime_btn">Show시간설정</button>
+  <button type="button" id = "toggle_btn">Toggle버튼</button>
+  <button type="button" id = "toggleTime_btn">Toggle시간설정</button>
+  <div id="show_effect">
+      <h2>  Merry Christmas & Happy New Year </h2>
+      <img src="ch11_xmas.jpg"/>
+  </div>
+
+    <h1> 2. slideUp(), slideDown(), slideToggle() </h1>
+    <button type = "button" id = "slidedown_btn">ShideDown버튼</button>
+    <button type = "button" id = "slidedownTime">SlideDown시간설정</button>
+    <button type = "button" id = "slideUp_btn">SlideUp버튼</button>
+    <button type = "button" id = "slideUpTime">SlideUp시간설정</button>
+    <button type="button" id = "slideToggle">SlideToggle버튼</button>
+    <button type="button" id = "slideToggleTime">SlideToggle시간설정</button>
+    <div id = "slide_effect">
+      <img src="ch11_xmas.jpg">
+      <button type = "button" id = "slide_hide">Slide감추기</button>
+    </div>
+
+    <h1> 3. faceIn(), fadeOut(), fadeToggle() </h1>
+    <button type = "button" id = "fadeIn_btn">FadeIn버튼</button>
+    <button type = "button" id = "fadeInTime">FadeIn시간설정</button>
+    <button type = "button" id = "fadeOut_btn">FadeOut버튼</button>
+    <button type = "button" id = "fadeOutTime">FadeOut시간설정</button>
+    <button type = "button" id = "fadeToggle">FadeToggle버튼</button>
+    <button type = "button" id = "fadeToggleTime">FadeToggle시간설정</button>
+    <div id = "fade_effect">
+      <img src="ch11_xmas.jpg">
+    </div>
+</body>
+</html>

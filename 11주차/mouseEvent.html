@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body{
+        background-color: black;
+        color:white;
+    }
+    #target{
+      width:730px;
+      height:200px;
+      background-color:yellow;
+      margin:10px;
+    }
+    table{
+      border-collapse:collapse;
+      margin:10px;
+      float:left;
+      width:230px;
+    }
+    td,th{
+      padding:10px;
+      border:1px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="target"></div>
+  <table>
+    <tr>
+      <th>이벤트 종류</th>
+      <th>발생시간</th>
+    </tr>
+    <tr>
+      <td>click</td>
+      <td id="click_event"></td>
+    </tr>
+    <tr>
+      <td>dbclick</td>
+      <td id = "dblclick_event"></td>
+    </tr>
+    <tr>
+      <td>mousedown</td>
+      <td id="mousedown_event"></td>
+    </tr>
+    <tr>
+      <td>mouseup</td>
+      <td id="mouseup_event"></td>
+    </tr>
+    <tr>
+      <td>mousemove</td>
+      <td id="mousemove_event"></td>
+    </tr>
+    <tr>
+      <td>mouseout</td>
+      <td id="mouseout_event"></td>
+    </tr>
+    <tr>
+      <td>contextmenu</td>
+      <td id="contextmenu_event"></td>
+    </tr>
+  </table>
+  <table>
+      <tr>
+        <th>키</th>
+        <th>발생시간</th>
+      </tr>
+      <tr>
+        <td>alt키</td>
+        <td id="altkey_event"></td>
+      </tr>
+      <tr>
+        <td>ctrl키</td>
+        <td id="ctrlkey_event"></td>
+      </tr>
+      <tr>
+        <td>shift키</td>
+        <td id="shiftkey_event"></td>
+      </tr>
+  </table>
+  <table>
+    <tr>
+      <td>위치</td>
+      <td>좌표 정보</td>
+    </tr>
+    <tr>
+      <td>clientX</td>
+      <td id="clientx_event"></td>
+    </tr>
+    <tr>
+      <td>clientY</td>
+      <td id="clienty_event"></td>
+    </tr>
+  </table>
+  <script>
+    var target = document.getElementById('target')
+    function handler(event){
+      var info = document.getElementById(event.type+'_event');
+      var time = new Date();
+      var str = time.getSeconds();
+      info.innerHTML = str;
+      if(event.altKey){
+        document.getElementById('altkey_event').innerHTML = str;
+      }
+      if(event.ctrlKey){
+        document.getElementById('ctrlkey_event').innerHTML = str;
+      }
+      if(event.shiftKey){
+        document.getElementById('shiftkey_event').innerHTML = str;
+      }
+      document.getElementById('clientx_event').innerHTML = event.clientX;
+      document.getElementById('clienty_event').innerHTML = event.clientY;
+    }
+    target.addEventListener('click', handler);
+    target.addEventListener('dblclick', handler);
+    target.addEventListener('mousedown', handler);
+    target.addEventListener('mouseup', handler);
+    target.addEventListener('mousemove', handler);
+    target.addEventListener('mouseover', handler);
+    target.addEventListener('mouseout', handler);
+    target.addEventListener('contextmenu', handler);
+  </script>
+</body>
+</html>

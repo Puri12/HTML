@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript2</title>
+
+  <script>
+    // 유효범위 예제 1~3
+    function Scoping_1() {
+      var scope = 'global';
+      function f() {
+        alert(scope);
+      }
+      f();
+    }
+
+    function Scoping_2() {
+      var scope = 'global';
+      function f() {
+        var scope = 'local';
+        alert('함수 안의 scope값' + scope);
+      }
+      f();
+      alert('함수 밖의 scope값' + scope);
+    }
+
+    function Scoping_3() {
+      var scope = 'global';
+      function f() {
+        scope = 'local';
+        alert('함수 안의 scope값' + scope);
+      }
+      f();
+      alert('함수 밖의 scope값' + scope);
+    }
+
+    // 잘못 사용된 전역변수 예제 1~2
+    function Global_1() {
+      function init() {
+        var i = 0;
+      }
+
+      for (var i = 0; i < 5; i++) {
+        init();
+        document.write(i);
+      }
+    }
+
+    function Global_2() {
+      function init() {
+        i = 0;
+      }
+
+      for (var i = 0; i < 5; i++) {
+        init();
+        document.write(i);
+      }
+    }
+
+    // 정적 유효범위 예제
+    function Static_Scoping() {
+      var i = 5;
+      function a() {
+        var i = 10;
+        b();
+      }
+
+      function b() {
+        document.write(i);
+      }
+
+      a();
+    }
+
+    // 객체에 저장된 데이터 불러오기
+    function Object() {
+      var grades = {'국어': 100, '영어': 80, '수학': 90};
+      for(key in grades) {
+        document.write('key: ' + key + 'value: ' + grades[key] + '<br>');
+      }
+    }
+
+    // this 객체 1~3
+    function This_1() {
+      if(window === this) {
+        document.write("this객체는 window");
+      }
+    }
+
+    function This_2() {
+      var object1 = {
+        func : function() {
+          document.write(this + "2 <br />");
+          if(object1 === this) {
+            document.write(this + "3 <br />");
+            document.write("this객체는 object1");
+          }
+        }
+      }
+      document.write(this + "1 <br />");
+      object1.func();
+    }
+
+    function This_3() {
+      var funcThis = null;
+
+
+      function Func() {
+        funcThis = this;
+      }
+
+      var object1 = Func();
+      if(funcThis === window) {
+        document.write('함수 호출의 this는 window <br />');
+      }
+
+      var object2 = new Func();
+      if(funcThis === object2) {
+        document.write('함수 호출의 this는 만들어진 객체 <br />');
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <input type="button" value="유효범위_1" onclick="Scoping_1();"><br><br>
+  <input type="button" value="유효범위_2" onclick="Scoping_2();"><br><br>
+  <input type="button" value="유효범위_3" onclick="Scoping_3();"><br><hr>
+  <input type="button" value="잘못 사용된 전역변수_1" onclick="Global_1();"><br><br>
+  <input type="button" value="잘못 사용된 전역변수_2" onclick="Global_2();"><br><hr>
+  <input type="button" value="정적 유효범위" onclick="Static_Scoping();"><br><hr>
+  <input type="button" value="객체에 저장된 데이터 불러오기" onclick="Object();"><br><hr>
+  <input type="button" value="this_1" onclick="This_1();"><br><br>
+  <input type="button" value="this_2" onclick="This_2();"><br><br>
+  <input type="button" value="this_3" onclick="This_3();"><br><hr>
+</body>
+</html>
